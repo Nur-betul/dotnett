@@ -1,0 +1,153 @@
+﻿@model HomeIndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .pointer {
+        cursor: pointer;
+    }
+
+    .buttonEdit:hover {
+        color: #ba8b00
+    }
+</style>
+
+<div id="nowIsTime">
+    @if (Model.NowIsTime != null && Model.NowIsTime.Count > 0)
+        {
+            @foreach (var nowIsTime in Model.NowIsTime)
+            {
+                <div class="alert alert-warning mr-5 ml-5 mb-3 mt-3" role="alert">
+                    <h6 class="mb-3">
+                        @{
+                            var title = string.IsNullOrEmpty(nowIsTime.Title) ? "Reminder" : nowIsTime.Title;
+                        }
+                        @title.ToString()<a class="mr-3 text-danger float-right" asp-action="Remove" asp-route-id="@nowIsTime.Id.ToString("N")"><i class="fas fa-trash-alt"></i></a>
+                    </h6>
+                    <h4>
+                        <a class="mr-3 text-success" asp-action="TimeOut" asp-route-id="@nowIsTime.Id.ToString("N")"><i class="fas fa-check-circle "></i></a>
+                        <b class="font-weight-light">@nowIsTime.ReminderDate.ToString("F")</b>
+                    </h4>
+                </div>
+            }
+
+        }
+
+     
+</div>
+<div class="text-center">
+
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <div class="row">
+            <div class="col-8 offset-2">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="row">
+                            <div class="col text-left ml-2">
+                                <label>Title</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" asp-for="CreateViewModel.Title" class="form-control form-control-lg rounded-0" placeholder="Optional">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 pr-0  mr-0">
+                        <div class="row">
+                            <div class="col text-left ml-2">
+                                <label>Reminder date</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input class="form-control form-control-lg rounded-0" type="datetime-local" asp-for="CreateViewModel.ReminderDate" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 pl-0  ml-0" style="margin-top: 31px;">
+                        <div class="row ">
+                            <div class="col">
+                                <button type="submit" class="btn btn-success btn-lg "><i class="fas fa-plus-circle fa-lg "></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @if (ViewData.ModelState != null && ViewData.ModelState.ErrorCount > 0)
+                {
+                    <div class="row">
+                        <div class="col-8 offset-1 mt-2">
+                            <div class="alert alert-danger alert-dismissible errorMessage" role="alert">
+                                <span type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></span>
+                                @ViewBag.Error
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+
+    }
+</div>
+
+<div>
+
+    @if (Model.NotTimeYets != null && Model.NotTimeYets.Count > 0)
+    {
+
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h4 class="mt-3">Reminders</h4>
+                <hr />
+                @foreach (var notTimeYet in Model.NotTimeYets)
+                {
+                    <div class="alert bg-light mr-5 ml-5" id="@notTimeYet.Id.ToString()" role="alert">
+                        <h2 class="mb-3 d-inline-flex">
+                            <span onclick="edit('title@(notTimeYet.Id.ToString("N").Substring(20))', '@(notTimeYet.Id.ToString())')" id="title@(notTimeYet.Id.ToString("N").Substring(20))">@notTimeYet.Title</span>
+                        </h2>
+                        <a class="text-danger float-right mr-3" asp-action="Remove" asp-route-id="@notTimeYet.Id.ToString("N")"><i class="fas fa-trash-alt fa-2x"></i></a>
+                        <p>
+                            <a class="mr-3 text-success" asp-action="TimeOut" asp-route-id="@notTimeYet.Id.ToString("N")"><i class="fas fa-check-circle fa-2x "></i></a>
+                            <span style="font-size: 30px;" class="font-weight-light" id="@notTimeYet.Id.ToString("N").Substring(20)"></span>
+                        </p>
+                        <script>
+                            var countDownDate = new Date("@(notTimeYet.ReminderDate.ToString("s"))");
+                            var timer = document.getElementById("@notTimeYet.Id.ToString("N").Substring(20)");
+                            countdown(countDownDate, timer, "@notTimeYet.Id.ToString()");
+                        </script>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+
+    @if (Model.TimeOuts != null && Model.TimeOuts.Count > 0)
+    {<div class="row">
+            <div class="col-8 offset-2">
+
+                <h4 class="mt-3">Timeout</h4>
+                <hr />
+                @foreach (var timeOut in Model.TimeOuts)
+                {
+
+                    <div class="alert bg-dark mr-5 ml-5" style="color: white;" role="alert">
+                        <h4 class="mb-3 d-inline-flex">
+                            @{
+                                var title = string.IsNullOrEmpty(timeOut.Title) ? "No title" : timeOut.Title;
+                            }
+                            <span class="d-inline-flex" onclick="edit('title@(timeOut.Id.ToString("N").Substring(20))','@(timeOut.Id.ToString())')" id="title@(timeOut.Id.ToString("N").Substring(20))">@title</span>
+                        </h4>
+                        <a class="mr-3 text-danger float-right" asp-action="Remove" asp-route-id="@timeOut.Id.ToString("N")"><i class="fas fa-trash-alt fa-2x"></i></a>
+                        <p>
+                            <span style="color: white;" class="font-weight-light">@timeOut.ReminderDate.ToString("F")</span>
+                        </p>
+
+                    </div>
+                }
+            </div>
+        </div>
+    }
+
+</div>

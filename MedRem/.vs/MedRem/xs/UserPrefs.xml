@@ -1,0 +1,57 @@
+﻿<Properties StartupConfiguration="{9C18574E-32B2-44A2-8532-773B12100CC6}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MedRem PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DataAccess/Concrete/ReminderRepository.cs">
+    <Files>
+      <File FileName="DataAccess/Concrete/ReminderRepository.cs" Line="10" Column="60" />
+      <File FileName="Controllers/HomeController.cs" Line="73" Column="10" />
+      <File FileName="wwwroot/css/site.css" Line="1" Column="1" />
+      <File FileName="wwwroot/js/site.js" Line="1" Column="1" />
+      <File FileName="../.editorconfig" Line="1" Column="1" />
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="appsettings.Development.json" Line="1" Column="1" />
+      <File FileName="package.json" Line="33" Column="26" />
+      <File FileName="Program.cs" Line="11" Column="17" />
+      <File FileName="Startup.cs" Line="32" Column="17" />
+      <File FileName="CustomValidations/ReminderDateAttribute.cs" Line="16" Column="10" />
+      <File FileName="DataAccess/Abstract/IReminderRepository.cs" Line="18" Column="1" />
+      <File FileName="Entities/MedReminder.cs" Line="23" Column="22" />
+      <File FileName="Models/ErrorViewModel.cs" Line="12" Column="1" />
+      <File FileName="Models/HomeIndexViewModel.cs" Line="17" Column="1" />
+      <File FileName="Models/ReminderCreateViewModel.cs" Line="18" Column="1" />
+      <File FileName="Models/ReminderRetitleModel.cs" Line="14" Column="1" />
+      <File FileName="Models/ReminderViewModel.cs" Line="13" Column="1" />
+      <File FileName="Properties/launchSettings.json" Line="15" Column="49" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MedRem" expanded="True">
+            <Node name="MedRem" expanded="True" selected="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="CustomValidations" expanded="True" />
+              <Node name="DataAccess" expanded="True">
+                <Node name="Abstract" expanded="True" />
+                <Node name="Concrete" expanded="True" />
+              </Node>
+              <Node name="Entities" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

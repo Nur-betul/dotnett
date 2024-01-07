@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "sZChWi1CXQwJjt0tL9Ouq6VaulWHy+wCrqgocsi+Bjw=",
+  "Source": "MedRem",
+  "BasePath": "_content/MedRem",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MedRem/wwwroot",
+      "Source": "MedRem",
+      "ContentRoot": "/Users/betulogmen/Projects/MedRem/MedRem/wwwroot/",
+      "BasePath": "_content/MedRem",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/betulogmen/Projects/MedRem/MedRem/wwwroot/css/site.css",
+      "SourceId": "MedRem",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/betulogmen/Projects/MedRem/MedRem/wwwroot/",
+      "BasePath": "_content/MedRem",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/site.css"
+    },
+    {
+      "Identity": "/Users/betulogmen/Projects/MedRem/MedRem/wwwroot/favicon.ico",
+      "SourceId": "MedRem",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/betulogmen/Projects/MedRem/MedRem/wwwroot/",
+      "BasePath": "_content/MedRem",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/betulogmen/Projects/MedRem/MedRem/wwwroot/js/site.js",
+      "SourceId": "MedRem",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/betulogmen/Projects/MedRem/MedRem/wwwroot/",
+      "BasePath": "_content/MedRem",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/site.js"
+    }
+  ]
+}

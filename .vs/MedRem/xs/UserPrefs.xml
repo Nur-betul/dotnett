@@ -1,0 +1,70 @@
+﻿<Properties StartupConfiguration="{C5C0318C-5B71-44C3-AE1A-CB2AD2F35FAB}|https">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.MedRem PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MedRem/DataAccess/Concrete/ReminderRepository.cs">
+    <Files>
+      <File FileName="MedRem/Controllers/HomeController.cs" />
+      <File FileName="MedRem/Models/ErrorViewModel.cs" Line="7" Column="23" />
+      <File FileName="MedRem/Models/ReminderCreateViewModel.cs" Line="12" Column="67" />
+      <File FileName="MedRem/Models/HomeIndexViewModel.cs" Line="13" Column="102" />
+      <File FileName="MedRem/Models/ReminderRetitleModel.cs" Line="10" Column="23" />
+      <File FileName="MedRem/Models/ReminderViewModel.cs" Line="10" Column="37" />
+      <File FileName="MedRem/Entities/MedReminder.cs" Line="16" Column="23" />
+      <File FileName="MedRem/CustomValidations/ReminderDateAttribute.cs" Line="14" Column="45" />
+      <File FileName="MedRem/DataAccess/Abstract/IReminderRepository.cs" />
+      <File FileName="MedRem/DataAccess/Concrete/ReminderRepository.cs" Line="82" Column="1" />
+      <File FileName="MedRem/Program.cs" />
+      <File FileName="package.json" />
+      <File FileName="MedRem/appsettings.Development.json" />
+      <File FileName="MedRem/Startup.cs" />
+      <File FileName="MedRem/wwwroot/css/site.css" />
+      <File FileName="MedRem/wwwroot/js/site.js" />
+      <File FileName="MedRem/Views/Home/Index.cshtml" Line="53" Column="127" />
+      <File FileName="MedRem/Properties/launchSettings.json" />
+      <File FileName="MedRem/appsettings.json" />
+      <File FileName="MedRem/Views/Shared/_Layout.cshtml" />
+      <File FileName="MedRem/Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="MedRem/Views/Shared/Error.cshtml" />
+      <File FileName="MedRem/Views/_ViewImports.cshtml" />
+      <File FileName="MedRem/Views/_ViewStart.cshtml" />
+      <File FileName="MedRem/package.json" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MedRem" expanded="True" selected="True">
+            <Node name="Solution Items" expanded="True" />
+            <Node name="MedRem" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="FrameworkReferences" expanded="True" />
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="CustomValidations" expanded="True" />
+              <Node name="DataAccess" expanded="True">
+                <Node name="Abstract" expanded="True" />
+                <Node name="Concrete" expanded="True" />
+              </Node>
+              <Node name="Entities" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="js" expanded="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
